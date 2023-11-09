@@ -1,6 +1,6 @@
 #
 # This policy configuration will be used by all exynos products
-# that inherit from cherish
+# that inherit from mist
 #
 
 ifeq ($(TARGET_COPY_OUT_VENDOR), vendor)
@@ -10,15 +10,15 @@ endif
 endif
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/cherish/sepolicy/exynos/private
+    device/mist/sepolicy/exynos/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/cherish/sepolicy/exynos/dynamic \
-    device/cherish/sepolicy/exynos/system
+    device/mist/sepolicy/exynos/dynamic \
+    device/mist/sepolicy/exynos/system
 
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/cherish/sepolicy/exynos/dynamic \
-    device/cherish/sepolicy/exynos/vendor
+    device/mist/sepolicy/exynos/dynamic \
+    device/mist/sepolicy/exynos/vendor
 endif
