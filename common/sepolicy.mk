@@ -10,25 +10,25 @@ endif
 endif
 
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += \
-    device/cherish/sepolicy/common/public
+    device/mist/sepolicy/common/public
 
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/cherish/sepolicy/common/private
+    device/mist/sepolicy/common/private
 
 ifeq ($(TARGET_USES_PREBUILT_VENDOR_SEPOLICY), true)
 SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += \
-    device/cherish/sepolicy/common/dynamic \
-    device/cherish/sepolicy/common/system
+    device/mist/sepolicy/common/dynamic \
+    device/mist/sepolicy/common/system
 else
 BOARD_VENDOR_SEPOLICY_DIRS += \
-    device/cherish/sepolicy/common/dynamic \
-    device/cherish/sepolicy/common/vendor
+    device/mist/sepolicy/common/dynamic \
+    device/mist/sepolicy/common/vendor
 endif
 
 # Selectively include legacy rules defined by the products
--include device/cherish/sepolicy/legacy-common/sepolicy.mk
+-include device/mist/sepolicy/legacy-common/sepolicy.mk
 
 # Include atv rules on atv product
 ifeq ($(PRODUCT_IS_ATV), true)
-include device/cherish/sepolicy/atv/sepolicy.mk
+include device/mist/sepolicy/atv/sepolicy.mk
 endif
